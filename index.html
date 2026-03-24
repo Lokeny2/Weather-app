@@ -8,29 +8,32 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="weather-card">
-            <h1>Weather Checker</h1>
-            
-            <div class="search-box">
-                <input type="text" id="city-input" placeholder="Enter city name...">
-                <button id="search-btn">Search</button>
-            </div>
+    <div class="weather-card">
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name..." spellcheck="false">
+            <button id="searchBtn">Search</button>
+        </div>
 
-            <div id="weather-result" class="hidden">
-                <h2 id="city-name"></h2>
-                <div class="temp-display">
-                    <span id="temperature"></span>
+        <p class="error" id="errorMsg">City not found. Try again!</p>
+
+        <div class="weather-info" id="weatherBox">
+            <h2 class="city" id="cityName">--</h2>
+            <div class="temp" id="tempValue">--°C</div>
+            <p id="description">--</p>
+            
+            <div class="details">
+                <div class="col">
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
                 </div>
-                <p id="description"></p>
-                <div class="details">
-                    <p>Humidity: <span id="humidity"></span>%</p>
-                    <p>Wind: <span id="wind"></span> km/h</p>
+                <div class="col">
+                    <p>Wind Speed</p>
+                    <strong id="windSpeed">-- km/h</strong>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
