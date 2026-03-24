@@ -1,14 +1,5 @@
-/* Simple Dark Theme Setup */
-:root {
-    --bg-color: #0b0e14;
-    --card-bg: #1a1f26;
-    --accent: #00e5ff;
-    --text-main: #e0e0e0;
-}
-
 body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -18,47 +9,72 @@ body {
 }
 
 .weather-card {
-    background-color: var(--card-bg);
+    background: #ffffff;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     text-align: center;
-    width: 300px;
+    width: 350px;
 }
 
-/* Input and Button Styling */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 input {
-    width: 80%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #333;
-    background: #252a33;
-    color: white;
-    margin-bottom: 10px;
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: var(--accent);
+    padding: 10px 15px;
+    background: #4facfe;
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #00b8d4;
+    background: #00d2ff;
 }
 
-/* keeps the results hidden initially */
-.hidden {
-    display: none;
+.weather-info {
+    display: none; /* Stays hidden until we get data */
 }
 
-.temp-display {
-    font-size: 2.5rem;
+.temp {
+    font-size: 3.5rem;
     font-weight: bold;
     margin: 10px 0;
-    color: var(--accent);
+    color: #333;
+}
+
+.city {
+    font-size: 1.8rem;
+    color: #555;
+    margin: 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.error {
+    color: #ff4d4d;
+    display: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
